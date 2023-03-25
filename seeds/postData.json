@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Your Todos  goes public!",
+    "post_content": "Your Todos is an application that helps you keep track of your todos. You can add, delete, and edit todos.",
+    "user_id": 3
+  },
+  {
+    "title": "Habits Builder",
+    "post_content": "Habits Builder is an application that helps you build habits. You can add, delete, and edit habits.",
+    "user_id": 1
+  },
+  {
+    "title": "Friends first",
+    "post_content": "Friends first is an application that helps find individuals with the same interest as you and git to hangout with them for a day in person or video calls from all over the world . You can add, delete, and edit friends.",
+    "user_id": 2
+  },
+  {
+    "title": "Cool Pets",
+    "post_content": "Cool Pets is an application that helps you find neighbors with pets and you can hangout with them and their pets. You can add, delete, and edit pets.",
+    "user_id": 4
+  },
+  {
+    "title": "Speed Trainer",
+    "post_content": "Speed Trainer is an application that helps you train your typing speed. You can add, delete, and edit words.",
+    "user_id": 5
+  }
+]

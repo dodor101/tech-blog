@@ -11,5 +11,24 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+  "name": "tech-blog",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dodor101/tech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dodor101/tech-blog/issues"
+  },
+  "homepage": "https://github.com/dodor101/tech-blog#readme"
 }
