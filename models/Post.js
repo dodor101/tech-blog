@@ -19,7 +19,7 @@ Post.init(
     },
     post_content: {
       type: DataTypes.TEXT,
-      allowNull: true,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -33,7 +33,7 @@ Post.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    createdAt: true,
+    created_at: true,
     modelName: "post",
   }
 );

@@ -1,0 +1,15 @@
+<div style="text-align: center; margin-top: 10%;">
+  {{#each posts as |post|}}
+    <a id="view-post" href="/post/{{id}}/view">
+
+      <div style="margin: 10px auto;  width: 80%;     ">
+
+        <h1>{{post.title}}</h1>
+        {{post.post_content}}
+        {{post.created_at}}
+        {{post.user.username}}
+      </div>
+    </a>
+
+  {{/each}}
+</div>

@@ -1,37 +1,27 @@
 [
   {
     "username": "james_rambo",
-    "twitter": "jamesrambo",
-    "github": "jamesrambo",
     "email": "james@gmail.com",
-    "password": "jamesrambo"
+    "password": "1234"
   },
   {
     "username": "james_bond",
-    "twitter": "jamesbond",
-    "github": "jamesbond",
     "email": "jamesbond@gmail.com",
-    "password": "jamesbond"
+    "password": "2134"
   },
   {
     "username": "jane_doe",
-    "twitter": "janedoe",
-    "github": "janedoe",
     "email": "jane@ggmai.com",
-    "password": "janedoe"
+    "password": "4321"
   },
   {
     "username": "john_doe",
-    "twitter": "johndoe",
-    "github": "johndoe",
     "email": "johndoe@gmai.com",
-    "password": "johndoe"
+    "password": "3241"
   },
   {
     "username": "David_porter",
-    "twitter": "Davidporter",
-    "github": "Davidporter",
     "email": "davidsporter@gmail.com",
-    "password": "Davidporter"
+    "password": "2341"
   }
 ]
