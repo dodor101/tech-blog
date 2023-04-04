@@ -4,6 +4,12 @@
     "post_id": 5,
     "comment_text": "This is awesome!"
   },
+
+  {
+    "user_id": 1,
+    "post_id": 2,
+    "comment_text": "This is awesome!"
+  },
   {
     "user_id": 4,
     "post_id": 4,

@@ -1,0 +1,50 @@
+<div style='text-align: center; margin-top: 2%; ;'>
+  <a id='view-post' href='/post/{{post.id}}' style='text-decoration: none; color:black;'>
+
+    <div style='margin: 10px auto;  width: 70%;  border: 1px solid; background-color:rgb(235, 239, 242)  '>
+      <div
+        class='d-flex justify-content-between'
+        style='background-color: rgb(50, 46, 46); color:rgb(249, 242, 242); padding:0 4px ;'
+      >
+        <h3>{{post.title}}</h3>
+        {{!  }}
+        <div class='d-flex justify-content-between align-items-center' style='width: 18%;'>
+          <p>Posted by: {{post.user.username}} on</p>
+          <p>{{format_date post.createdAt}}</p>
+        </div>
+      </div>
+      {{!  }}
+      <div class='mt-2'>
+        {{post.post_content}}
+      </div>
+
+    </div>
+  </a>
+
+</div>
+
+{{! break }}
+<div style='text-align: center; margin-top: 2%; height: 500px ;'>
+  <a id='view-post' href='/post/{{post.id}}' style='text-decoration: none; color:black;'>
+
+    <div style='margin: 10px auto;  width: 70%;  border: 1px solid; background-color:rgb(235, 239, 242)  '>
+      <div
+        class='d-flex justify-content-between'
+        style='background-color: rgb(247, 236, 236); color:rgb(25, 24, 24); padding:0 4px ; height: 50px'
+      >
+
+      </div>
+      {{!  }}
+
+      <div class='mt-2' style='height: 100px;'>
+        <h1>
+          {{#each post.comments}}
+            <p>{{this.comment_text}}</p>
+          {{/each}}
+        </h1>
+      </div>
+
+    </div>
+  </a>
+
+</div>

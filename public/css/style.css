@@ -1,19 +1,30 @@
-body{
-    background-color: #b5e8b7;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
+body {
+  background-color: #b5e8b7;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
-
 header {
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input {
+    border: none;
+    border-radius: 20px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    outline: none;
+}
+
+label{
+    display: block;
 }
