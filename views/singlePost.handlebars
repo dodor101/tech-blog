@@ -27,21 +27,30 @@
 <div style='text-align: center; margin-top: 2%; height: 500px ;'>
   <a id='view-post' href='/post/{{post.id}}' style='text-decoration: none; color:black;'>
 
-    <div style='margin: 10px auto;  width: 70%;  border: 1px solid; background-color:rgb(235, 239, 242)  '>
+    <div style='margin: 10px auto;  width: 70%;  border: 1px solid; background-color:rgb(143, 255, 210)  '>
       <div
         class='d-flex justify-content-between'
-        style='background-color: rgb(247, 236, 236); color:rgb(25, 24, 24); padding:0 4px ; height: 50px'
+        style='background-color: rgb(61, 28, 28); color:rgb(98, 237, 181); padding:0 4px ; height: 50px'
       >
-
+        <h3>All Comments</h3>
       </div>
       {{!  }}
 
-      <div class='mt-2' style='height: 100px;'>
-        <h1>
+      <div class='mt-2'>
+        {{#if post.comments}}
           {{#each post.comments}}
-            <p>{{this.comment_text}}</p>
+
+            <div>
+              <p>By: {{user.username}}</p>
+              <p>Comment: {{this.comment_text}}</p>
+              <p> On {{format_date created_at}}</p>
+            </div>
           {{/each}}
-        </h1>
+        {{else}}
+
+          <h3>No Comments</h3>
+        {{/if}}
+
       </div>
 
     </div>
