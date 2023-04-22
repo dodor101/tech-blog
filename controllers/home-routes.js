@@ -72,7 +72,7 @@ router.post('/post', async (req, res) => {
       user_id: req.session.user_id,
     });
     console.log('🚀 ~ file: home-routes.js:76 ~ router.post ~ addPost:', addPost);
-    res.status(200).json(addPost);
+    res.redirect('/');
   } catch (error) {
     res.status(400).json(error);
   }
