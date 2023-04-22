@@ -68,7 +68,11 @@ router.get('/add', (req, res) => {
 // Add a post
 router.post('/post', async (req, res) => {
   try {
-    const addPost = await Post.create(req.body, {
+    console.log("Session Info");
+    console.log(req.session);
+    const addPost = await Post.create({
+      title: req.body.title,
+      post_content: req.body.post_content,
       user_id: req.session.user_id,
     });
     console.log('🚀 ~ file: home-routes.js:76 ~ router.post ~ addPost:', addPost);
