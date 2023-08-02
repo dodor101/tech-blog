@@ -10,7 +10,7 @@
     "sequelize": "^6.30.0"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "seed": "node seeds/index.js"
   },
   "name": "tech-blog",
@@ -27,8 +27,5 @@
   "bugs": {
     "url": "https://github.com/dodor101/tech-blog/issues"
   },
-  "homepage": "https://github.com/dodor101/tech-blog#readme",
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+  "homepage": "https://github.com/dodor101/tech-blog#readme"
 }
