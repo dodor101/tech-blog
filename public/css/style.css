@@ -33,24 +33,20 @@ label {
 }
 
 .button-div {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: center;
-  margin-top: 20%;
+  position: fixed;
+  left: 80%;
+  bottom: 20%;
+  z-index: 1;
 }
-
 .button-div a {
   font-size: 20px;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #fff;
+  border-radius: 16px;
+  padding: 10px 0;
+  background-image: linear-gradient(to bottom, #074597, #ce9797);
   border: #000 solid;
-  color: #5e93d8;
+  color: white;
   text-decoration: none;
-}
-
-.button-div a:hover {
-  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* post form */
@@ -66,10 +62,14 @@ label {
   border-radius: 10px;
   color: #fff;
   opacity: 0.7;
-
 }
 
 .post-form h3 {
-    background-color: #0e5033;
-    text-align: center;
+  background-color: #0e5033;
+  text-align: center;
+}
+textarea{
+  outline: none;
+  border-radius: 10px;
+  resize: none;
 }

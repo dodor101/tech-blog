@@ -1,0 +1,19 @@
+<article class='d-flex justify-content-center row bg-info mt-5 rounded w-25 p-5 m-auto text-light'>
+  <h2>
+    Edit Post
+  </h2>
+  <form class='edit-post-form del-post'>
+    <div>
+      <input name='title' type='text' value='{{post.title}}' placeholder='Title' />
+    </div>
+    <div>
+      <textarea name='post_content' class='p-1 mb-2' placeholder='Detail'> {{post.post_content}}</textarea>
+    </div>
+
+    <button type='submit' class='btn btn-primary'>Save</button>
+    <button type='button' class='btn btn-danger mt-2' data-id={{{post.id}}}>Delete</button>
+  </form>
+</article>
+
+<script src='/js/editPost.js'></script>
+<script src='/js/deletePost.js'></script>
