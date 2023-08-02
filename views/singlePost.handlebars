@@ -11,38 +11,39 @@
       </div>
     </div>
     {{!  }}
-    <div class='text-center p-4'>
+    <div class='text-center p-4 fs-5'>
       {{post.post_content}}
     </div>
 
     {{!-- <a id='view-post' href='/post/{{post.id}}' style='text-decoration: none; color:black;'>Con</a> --}}
     <hr />
 
+    <div class='d-flex justify-content-center'>
+      <h3>All COMMENTS</h3>
+    </div>
+    <div style='margin: 10px auto;  width: 70%;  border: 0.1px solid; '>
 
-      <div class='d-flex justify-content-center'>
-        <h3>All COMMENTS</h3>
+      {{!  }}
+
+      <div>
+        {{#if post.comments}}
+          <ul class='list-group'>
+            {{#each post.comments}}
+              <li class='list-group-item bg-info'>
+                <div class='d-flex justify-content-between'>
+                  <h4><span>By:</span> {{user.username}} </h4>
+                  <p>On {{format_date created_at}}</p></div>
+                <p class='text-center fs-5'>{{this.comment_text}}</p>
+                <div><button class='btn btn-danger'>DELETE </button></div>
+              </li>
+            {{/each}}
+          </ul>
+
+        {{else}}
+          <h3>No Comments</h3>
+        {{/if}}
       </div>
-      <div style='margin: 10px auto;  width: 70%;  border: 0.1px solid; '>
-
-        {{!  }}
-
-        <div >
-          {{#if post.comments}}
-              <ul class='list-group'>
-                 {{#each post.comments}}
-                <li class='list-group-item bg-info '>
-                <div class='d-flex justify-content-between'> <h4><span>By:</span>  {{user.username}} </h4> <p>On {{format_date created_at}}</p></div>
-                  <p class='text-center'>{{this.comment_text}}</p>
-                  <div><button class='btn btn-danger'>DELETE </button></div>
-                </li>
-                 {{/each}}
-              </ul>
-
-          {{else}}
-            <h3>No Comments</h3>
-          {{/if}}
-        </div>
-      </div>
+    </div>
 
   </div>
   <div class='post-form'>

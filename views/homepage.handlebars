@@ -6,11 +6,11 @@
         <h5>{{post.title}}</h5>
         {{!  }}
         <div class='d-flex justify-content-center align-items-center w-70 gap-2 text-dark'>
-          <p>Posted by: {{post.user.username}} on {{format_date post.createdAt}}</p>
+          <p >Posted by: {{post.user.username}} on {{format_date post.createdAt}}</p>
         </div>
       </div>
       {{!  }}
-      <p class='text-center p-4'>{{post.post_content}}</p>
+      <p class='text-center p-4 fs-5'>{{post.post_content}}</p>
 
       <button class='btn btn-primary text-light w-25 mx-auto m-2 fs-6'><a
           id='view-post'
