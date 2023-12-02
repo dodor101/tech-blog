@@ -1,19 +1,21 @@
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
+  try {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/delete-post/${id}`, {
-      method: 'DELETE',
-    });
+    if (id) {
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE',
+      });
 
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert('Failed to delete project');
+      if (response.status === 200) {
+        document.location.replace('/');
+      } else {
+        alert('Something went wrong');
+      }
     }
+  } catch (error) {
+    console.log(error);
   }
 };
-
-//document.querySelector('.new-project-form').addEventListener('submit', newFormHandler);
 
 document.querySelector('.del-post').addEventListener('click', delButtonHandler);

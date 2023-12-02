@@ -9,14 +9,18 @@ router.post('/', async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
-    const username = dbUserData.get({ plain: true }).username;
-    const user_id = dbUserData.get({ plain: true }).id;
+    const userData = dbUserData.get({ plain: true });
+
+    const username = userData.username;
+    const user_id = userData.id;
 
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.username = username;
       req.session.user_id = user_id;
+
+      console.log(userData);
 
       res.status(200).json(dbUserData);
     });

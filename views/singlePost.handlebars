@@ -1,5 +1,4 @@
 <div class='container p-5'>
-
   <div class='list-group bg-light mb-2'>
     <div class='d-flex justify-content-between bg-info text-dark list-group-item px-4'>
       <h5>{{post.title}}</h5>
@@ -14,10 +13,7 @@
     <div class='text-center p-4 fs-5'>
       {{post.post_content}}
     </div>
-
-    {{!-- <a id='view-post' href='/post/{{post.id}}' style='text-decoration: none; color:black;'>Con</a> --}}
     <hr />
-
     <div class='d-flex justify-content-center'>
       <h3>All COMMENTS</h3>
     </div>
@@ -27,14 +23,16 @@
 
       <div>
         {{#if post.comments}}
-          <ul class='list-group'>
+          <ul class='list-group comments'>
+
             {{#each post.comments}}
               <li class='list-group-item bg-info'>
                 <div class='d-flex justify-content-between'>
+
                   <h4><span>By:</span> {{user.username}} </h4>
                   <p>On {{format_date created_at}}</p></div>
                 <p class='text-center fs-5'>{{this.comment_text}}</p>
-                <div><button class='btn btn-danger'>DELETE </button></div>
+                <div><button class='btn btn-danger' data-id='{{id}}'>DELETE </button></div>
               </li>
             {{/each}}
           </ul>

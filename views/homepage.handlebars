@@ -4,9 +4,10 @@
     <div class='list-group bg-light mb-2'>
       <div class='d-flex justify-content-between bg-info text-dark list-group-item px-4'>
         <h5>{{post.title}}</h5>
+
         {{!  }}
         <div class='d-flex justify-content-center align-items-center w-70 gap-2 text-dark'>
-          <p >Posted by: {{post.user.username}} on {{format_date post.createdAt}}</p>
+          <p>Posted by: {{post.user.username}} on {{format_date post.createdAt}}</p>
         </div>
       </div>
       {{!  }}
@@ -17,6 +18,14 @@
           href='/post/{{post.id}}'
           class='text-light'
         >See Post</a></button>
+      <input type='hidden' name='post-id' value='{{post.id}}' />
+      {{!-- <button class='btn btn-success mb-2 mx-auto' id='like' data-id='{{post.id}}'><i class='fa-solid fa-thumbs-up'></i>
+        {{getLikesLength post.likeTables}}</button>
+
+      <button class='btn btn-success mx-auto' id='dislike' data-id='{{post.id}}'><i class='fa-solid fa-thumbs-down'></i>
+        {{getDislikesLength post.likeTables}}</button> --}}
     </div>
   {{/each}}
 </div>
+
+<script src='./js/createLike.js'></script>

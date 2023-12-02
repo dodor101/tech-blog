@@ -10,4 +10,17 @@ module.exports = {
 
     return word;
   },
+
+  getLikesLength: (likeTables) => {
+    if (likeTables) {
+      const numberOfLikes = likeTables.filter((like) => like.like === true);
+      return numberOfLikes.length;
+    }
+  },
+  getDislikesLength: (likeTables) => {
+    if (likeTables) {
+      const numberOfDislikes = likeTables.filter((like) => like.like === false);
+      return numberOfDislikes.length;
+    }
+  },
 };
